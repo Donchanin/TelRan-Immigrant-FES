@@ -1,7 +1,7 @@
 var app = angular.module("countryApp",[]);
-alert("1");
+
 app.controller('countryController', function($scope, $http) {
-	alert("2");
+	
 	$scope.countryList;
 	
 	$scope.renewInfo = function() {
