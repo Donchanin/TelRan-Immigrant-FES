@@ -7,11 +7,22 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>Immigrant. Countries</title>
-
+	<script type="text/javascript" src="static/js_folder/angular.min.js"></script>
+	<script type="text/javascript" src="static/js_folder/country/countryList.js"></script>
 </head>
 
-<body>
+<body data-ng-app="countryApp">
 	COUNTRIES HERE!
+	
+	<div data-ng-controller="countryController">
+		
+		<table>
+			<tr data-ng-repeat="country in countryList | orderBy : name">				
+				<td class="clickable" data-ng-click="toCountry(country)">{{country.name}}</td>			
+			</tr>		
+		</table>
+	
+	</div>
 </body>
 </html>
 
