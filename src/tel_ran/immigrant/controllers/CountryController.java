@@ -1,5 +1,7 @@
 package tel_ran.immigrant.controllers;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,9 +20,10 @@ public class CountryController {
 	}
 	
 	@RequestMapping(value="/country"+"/{countryId}")
-	public String country(@PathVariable int countryId, Model model) {
+	public String country(@PathVariable int countryId, HttpServletRequest request, Model model) {
+		String name = request.getParameter("name");
 		model.addAttribute("id", countryId);
-		model.addAttribute("titleName", "Country Info");
+		model.addAttribute("titleName", name + ": country info");
 		return "admin/country";
 	}
 

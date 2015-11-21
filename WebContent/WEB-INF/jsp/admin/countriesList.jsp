@@ -10,8 +10,8 @@
 	<script type="text/javascript" src="<c:url value="/static/js_folder/jquery-2.1.4.min.js" />"></script>	
 	<script type="text/javascript" src="<c:url value="/static/js_folder/template.js" />" ></script>	
 	<link type="text/css" rel="stylesheet" href="<c:url value="/static/css-folder/countryStyle.css" />" />	
-	<script type="text/javascript" src="static/js_folder/angular.min.js"></script>
-	<script type="text/javascript" src="static/js_folder/country/countryList.js"></script>
+	<script type="text/javascript" src="<c:url value="/static/js_folder/angular.min.js" />" ></script>
+	<script type="text/javascript" src="<c:url value="/static/js_folder/country/countryList.js" />" ></script>
 
 </head>
 

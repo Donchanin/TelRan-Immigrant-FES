@@ -18,7 +18,7 @@ app.controller('countryController', function($scope, $http) {
 	$scope.renewInfo();
 	
 	$scope.toCountry = function(country) {
-		document.location.href="/TelRan-Immigrant-FES/country/"+country.id;
+		document.location.href="/TelRan-Immigrant-FES/country/"+country.id+"?name="+country.name;
 	}
 	
 });
