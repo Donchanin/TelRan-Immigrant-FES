@@ -12,13 +12,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class CountryController {
 	
 	@RequestMapping({"/"})
-	public String countriesList(){	
+	public String countriesList(Model model){
+		model.addAttribute("titleName", "All countries");
 		return "admin/countriesList";
 	}
 	
 	@RequestMapping(value="/country"+"/{countryId}")
 	public String country(@PathVariable int countryId, Model model) {
 		model.addAttribute("id", countryId);
+		model.addAttribute("titleName", "Country Info");
 		return "admin/country";
 	}
 
